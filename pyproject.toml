@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cybersecurity-skills-wrap"
+version = "1.0.0"
+description = "Python wrapper for Anthropic-Cybersecurity-Skills — 754 structured cybersecurity skills for AI agents, mapped to 5 frameworks."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "q15004040209-creator", email = "q15004040209@example.com"}
+]
+keywords = [
+    "cybersecurity",
+    "mitre-attack",
+    "nist-csf",
+    "mitre-atlas",
+    "mitre-d3fend",
+    "nist-ai-rmf",
+    "ai-agents",
+    "agentskills",
+    "security-skills",
+    "threat-hunting",
+    "incident-response",
+    "digital-forensics",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: Apache Software License (Apache-2.0)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/q15004040209-creator/cybersecurity-skills-wrap"
+Repository = "https://github.com/q15004040209-creator/cybersecurity-skills-wrap"
+Upstream = "https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
+Documentation = "https://github.com/q15004040209-creator/cybersecurity-skills-wrap#readme"
+
+[project.entry-points]
+"cybersecurity_skills_wrap" = {}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cybersecurity_skills_wrap*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py38", "py39", "py310", "py311", "py312"]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
